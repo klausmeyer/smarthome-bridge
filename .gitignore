@@ -1,0 +1,5 @@
+.byebug_history
+accessory_info.yml
+identifier_cache.yml
+data/*
+!data/.keep

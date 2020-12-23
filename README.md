@@ -32,5 +32,5 @@ Available Environment Variables:
 
 ```
 docker build -t klausmeyer/smarthome-bridge .
-docker run --privileged --net=host --hostname=$(hostname -f) --volume $PWD/data:/app/data klausmeyer/smarthome-bridge
+docker run --net=host --hostname=$(hostname -f) --volume $PWD/data:/app/data klausmeyer/smarthome-bridge
 ```

@@ -8,10 +8,11 @@ class App
     register_actors
   end
 
-  def run
+  def run(loop: false)
     Thread.new do
       loop do
         update_actors
+        break unless loop
         Kernel.sleep 5
       end
     end
@@ -24,7 +25,11 @@ class App
   def register_actors
     Fritzbox::Smarthome::Actor.all.each do |actor|
       logger.info "Register actor #{actor.name}"
-      Registry.add(Entry.new(actor: actor))
+
+      entry = Entry.new(actor: actor)
+      entry.register
+
+      Registry.add(entry)
     end
   end
 

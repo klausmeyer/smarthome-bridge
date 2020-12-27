@@ -2,15 +2,23 @@ class Registry
   include Singleton
 
   class << self
-    delegate :add, :entry_with_ain, to: :instance
+    delegate :all, :add, :clear!, :entry_with_ain, to: :instance
   end
 
   def initialize
-    self.entries = []
+    clear!
+  end
+
+  def all
+    entries
   end
 
   def add(entry)
     entries << entry
+  end
+
+  def clear!
+    self.entries = []
   end
 
   def entry_with_ain(ain)

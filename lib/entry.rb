@@ -8,7 +8,9 @@ class Entry
 
   def initialize(actor:)
     self.actor   = actor
+  end
 
+  def register
     register_service
   end
 

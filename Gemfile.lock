@@ -82,6 +82,7 @@ GEM
     tilt (2.0.10)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    webrick (1.7.0)
     wisper (2.0.1)
     zeitwerk (2.4.2)
 
@@ -94,6 +95,7 @@ DEPENDENCIES
   fritzbox-smarthome
   rspec
   ruby_home
+  webrick
 
 BUNDLED WITH
-   2.1.4
+   2.2.3

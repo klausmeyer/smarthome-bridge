@@ -4,6 +4,6 @@ $stdout.sync = true
 App.logger = Logger.new($stdout)
 
 app = App.new
-app.run
+app.run(loop: true)
 
 RubyHome.run

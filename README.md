@@ -8,10 +8,6 @@ Powered by:
 
 Designed to run in Docker on a Raspberry Pi computer.
 
-**Note**:
-
-Currently using ruby version `2.6.x` as `2.7.x` isn't available on Docker Hub for `arm32v7` architecture.
-
 ## Config:
 
 Available Environment Variables:

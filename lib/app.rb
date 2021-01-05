@@ -23,7 +23,7 @@ class App
   delegate :logger, to: :class
 
   def register_actors
-    Fritzbox::Smarthome::Actor.all.each do |actor|
+    Fritzbox::Smarthome::Heater.all.each do |actor|
       logger.info "Register actor #{actor.name}"
 
       entry = Entry.new(actor: actor)
@@ -34,7 +34,7 @@ class App
   end
 
   def update_actors
-    Fritzbox::Smarthome::Actor.all.each do |actor|
+    Fritzbox::Smarthome::Heater.all.each do |actor|
       logger.info "Updating actor #{actor.name}"
       entry = Registry.entry_with_ain(actor.ain)
 

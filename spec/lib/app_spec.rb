@@ -1,7 +1,7 @@
 RSpec.describe App do
-  let(:actor_a) { instance_double('Fritzbox::Smarthome::Actor', type: :device, name: 'Actor A', ain: 'ain:01', hkr_temp_is: 20.0, hkr_temp_set: 21.0) }
-  let(:actor_b) { instance_double('Fritzbox::Smarthome::Actor', type: :device, name: 'Actor B', ain: 'ain:02', hkr_temp_is: 20.0, hkr_temp_set: 21.0) }
-  let(:actor_c) { instance_double('Fritzbox::Smarthome::Actor', type: :device, name: 'Actor C', ain: 'ain:03', hkr_temp_is: 20.0, hkr_temp_set: 21.0) }
+  let(:actor_a) { instance_double('Fritzbox::Smarthome::Heater', type: :device, name: 'Actor A', ain: 'ain:01', hkr_temp_is: 20.0, hkr_temp_set: 21.0) }
+  let(:actor_b) { instance_double('Fritzbox::Smarthome::Heater', type: :device, name: 'Actor B', ain: 'ain:02', hkr_temp_is: 20.0, hkr_temp_set: 21.0) }
+  let(:actor_c) { instance_double('Fritzbox::Smarthome::Heater', type: :device, name: 'Actor C', ain: 'ain:03', hkr_temp_is: 20.0, hkr_temp_set: 21.0) }
 
   let(:entry_a) { instance_double('Entry', actor: actor_a, service: service, register: nil) }
   let(:entry_b) { instance_double('Entry', actor: actor_b, service: service, register: nil) }
@@ -14,7 +14,7 @@ RSpec.describe App do
 
     App.logger = Logger.new(IO::NULL)
 
-    allow(Fritzbox::Smarthome::Actor).to receive(:all).and_return([
+    allow(Fritzbox::Smarthome::Heater).to receive(:all).and_return([
       actor_a,
       actor_b,
       actor_c,

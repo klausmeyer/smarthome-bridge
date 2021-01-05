@@ -2,7 +2,7 @@ RSpec.describe Entry do
   let(:instance) { described_class.new(actor: actor) }
 
   let(:actor) do
-    instance_double('Fritzbox::Smarthome::Actor',
+    instance_double('Fritzbox::Smarthome::Heater',
       type:         :device,
       name:         'Heizung Küche',
       hkr_temp_set: 21.0,

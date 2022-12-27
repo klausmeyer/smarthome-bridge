@@ -7,7 +7,7 @@ class Entry
   attr_accessor :actor, :service
 
   def initialize(actor:)
-    self.actor   = actor
+    self.actor = actor
   end
 
   def register

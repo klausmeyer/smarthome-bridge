@@ -20,9 +20,9 @@ RSpec.describe App do
       actor_c,
     ])
 
-    allow(Entry).to receive(:new).with(actor: actor_a).and_return(entry_a)
-    allow(Entry).to receive(:new).with(actor: actor_b).and_return(entry_b)
-    allow(Entry).to receive(:new).with(actor: actor_c).and_return(entry_c)
+    allow(Entry).to receive(:new).with({actor: actor_a}).and_return(entry_a)
+    allow(Entry).to receive(:new).with({actor: actor_b}).and_return(entry_b)
+    allow(Entry).to receive(:new).with({actor: actor_c}).and_return(entry_c)
   end
 
   describe '#initialize' do

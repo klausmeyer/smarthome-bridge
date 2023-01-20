@@ -39,7 +39,7 @@ GEM
     nori (2.6.0)
     oj (3.13.23)
     racc (1.6.2)
-    rack (2.2.4)
+    rack (2.2.6.2)
     rack-protection (2.2.3)
       rack
     rbnacl (7.1.1)
